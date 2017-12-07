@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'core.build',
+    name: 'core.plugin.build',
     dependecies: [
-        'core.types'
+        'core.plugin.type'
     ],
     extend: {
         build(source, done) {
@@ -47,17 +47,4 @@ module.exports = {
 
         }
     }
-};
-
-var schema = {
-    name: 'entity',
-    properties: [{
-        key: 'id',
-        path: ['fields', '.id', 0],
-        type: 'string',
-    },{
-        key: 'languages',
-        path: ['fields', 'languages'],
-        type: 'array',
-    }]
 };
